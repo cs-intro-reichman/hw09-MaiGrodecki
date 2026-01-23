@@ -41,12 +41,12 @@ public void addFirst(char chr) {
     /** GIVE Textual representation of this list. */
     public String toString() {
         Node current = first;
-        String print = "";
+        String print = "(";
         while(current != null){
-            print += ("\n" + current.cp);
+            print += (current.cp);
             current = current.next;
         }
-        return print;
+        return print+")";
     }
 
 
