@@ -114,8 +114,9 @@ public String generate(String initialText, int textLength) {
     }
     String generatedText = initialText;
     String window = generatedText.substring(generatedText.length() - windowLength);
-
-    while (generatedText.length() < textLength) {
+    int targetLength = initialText.length() + textLength;
+    
+    while (generatedText.length() < targetLength) {
         List probs = CharDataMap.get(window);
         
         if (probs == null) {

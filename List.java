@@ -43,10 +43,10 @@ public void addFirst(char chr) {
         Node current = first;
         String print = "(";
         while(current != null){
-            print += (current.cp);
+            print += (current.cp+ " ");
             current = current.next;
         }
-        return print+")";
+        return print.trim() + ")";
     }
 
 
